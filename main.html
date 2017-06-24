@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MAJORST</title>
+    <meta name="description" content="MAJORST">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MAJORST">
+    <meta property="og:description" content="MAJORST">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <link rel="canonical" href="" />    
+    <link href="css/Swiper.css?ver=1" rel="stylesheet" />
+    <link href="css/css.css?ver=1" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/css_ie8.css" media="all" /><![endif]-->    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/Swiper.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '#banner_roll',
+                paginationClickable: true,
+                loop: true,
+                autoplay: 4000
+            });
+
+            $("div.main_list_img").hover(
+                function () {
+                    $("div.list_img_layer").hide();
+                    $(this).children("div.list_img_layer").show();
+                },
+                function () {
+                    $("div.list_img_layer").hide();
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div class="global_menu_area">
+                <div class="content">
+                    <ul class="global_menu">
+                        <li><a href="#">Home</a></li>
+                        <li>|</li>
+                        <li><a href="#">ContactUS</a></li>
+                        <li>|</li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div style="clear:both;"></div>
+                <div class="top_logo">
+                    <a href="#"><img src="img/toplogo.png" alt="" /></a>
+                </div>
+                <ul class="top_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">솔루션 <i style="padding:0 0 0 10px;"><img src="img/arrow.png" /></i></a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">CONTACT US</a></li>                    
+                    <li class="top_menu_btn_box"><div class="top_menu_btn"><a href="#"><img src="img/top_menu_icon.png" alt="MENU" /></a></div></li>
+                </ul>
+                <div style="clear:both;"></div>
+            </div>            
+        </div>
+        <div id="mid">
+            <div class="main_banner1_area">
+                <div class="main1_tit">
+                    <dl class="main1_txt">
+                        <dt><strong>건강하고, 안전한 세상</strong>을 만드는 기업<br /><strong>솔비트</strong>가 함께 하겠습니다.</dt>
+                        <dd>Business Innovation</dd>
+                    </dl>
+                    <img src="img/main_1_1.png" />
+                </div>                
+            </div>
+            <div class="main_banner2_area">
+                <div id="banner_area" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/main_2.png" /></div>
+                        <div class="swiper-slide"><img src="img/main_1.png" /></div>
+                    </div>
+                    <div id="banner_roll" class="swiper-pagination"></div>
+                </div>                
+            </div>
+            <div class="main_banner3_area">
+                <div class="main3_tit">
+                    <div class="main3_tit_box">
+                        <h3>사업분야 서비스</h3>
+                        <p>수년간의 경험과 노하우로 보다 나은 가치를 추구합니다.</p>
+                    </div>
+                    <table class="main_list_tb">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="main_list_box">
+                                        <div class="main_list_img">
+                                            <img src="img/main_list_img1.png" />
+                                            <div class="list_img_layer">
+                                                <div class="list_img_layer_btn">
+                                                    <a href="#"><img src="img/btn_plus.png" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <dl class="main_list_txt_box">
+                                            <dt>Security solution</dt>
+                                            <dd>- 분리된 NW 환경에서 완벽한 데이터 보안을 보장하는 단방향 전송 제어 솔루션</dd>
+                                            <dd>- Virtual Platform 기반 교육훈련지원 시스템</dd>
+                                        </dl>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="main_list_box">
+                                        <div class="main_list_img">
+                                            <img src="img/main_list_img2.png" />
+                                            <div class="list_img_layer">
+                                                <div class="list_img_layer_btn">
+                                                    <a href="#"><img src="img/btn_plus.png" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <dl class="main_list_txt_box">
+                                            <dt>Healthcare solution</dt>
+                                            <dd class="pos_l" style="width:145px;">- 홈페이지</dd>
+                                            <dd class="pos_l">- e-IRB</dd>
+                                            <dd style="clear:both;"></dd>
+                                            <dd class="pos_l" style="width:145px;">- 연구지원</dd>
+                                            <dd class="pos_l">- e-CRF</dd>
+                                            <dd style="clear:both;"></dd>                                            
+                                            <dd class="pos_l">- CDM&통계</dd>
+                                        </dl>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="main_list_box">
+                                        <div class="main_list_img">
+                                            <img src="img/main_list_img3.png" />
+                                            <div class="list_img_layer">
+                                                <div class="list_img_layer_btn">
+                                                    <a href="#"><img src="img/btn_plus.png" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <dl class="main_list_txt_box">
+                                            <dt>Consulting Service</dt>
+                                            <dd>헬스케어와 보안을 핵심 분야로 해서 시장에서 인정받은 여러 솔루션들을 공급하고 관련 기술 컨설팅 및 구축 사</dd>
+                                        </dl>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                  
+                </div>
+            </div>
+            <!--<div class="content">
+                
+            </div>-->      
+        </div>
+        <div id="foot">
+            <div class="content">
+                <div class="foot_box">
+                    <div class="foot_logo">
+                        <img src="img/foot_logo.png" />
+                    </div>
+                    <div class="foot_txt">
+                        <p>사업자등록번호: 000-000-00000<span class="foot_txt_bar">|</span>개인정보 관리책임자: 이용현 대리 yhlee@solbit.kr<span class="foot_txt_bar">|</span>(주) 솔비트 대표이사 홍호진</p>
+                        <p>(주) 솔비트 06632 서울시 서초구 서초중앙로22길 83(서초동, 주현빌등) 4층<span class="foot_txt_bar">|</span>T +82 2 2345 5678<span class="foot_txt_bar">|</span>M +82 10 2345 5678</p>
+                        <p>ⓒ Copyright 2017 SOLBIT All right reserved. Contact Webmaster for more Information.</p>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
