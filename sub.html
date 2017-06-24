@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>SOLBIT</title>
+	<meta charset="utf-8" />
+    <link href="css/Swiper.css?ver=1" rel="stylesheet" />
+    <link href="css/css.css?ver=1" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #sub_slidemenu { position:absolute; width:89px; height:274px; top:50%; right:0; z-index:9999; text-align:right; background:url(../img/quickmenu.png) no-repeat; }
+        #sub_slidemenu ul { width:100%; height:200px; text-align:center; margin:50px 0 0 0; }
+        #sub_slidemenu ul li { padding-bottom:13px; }
+        #sub_slidemenu ul li p { margin:0; padding:10px 0 10px 0; font-weight:bold; }
+        #sub_slidemenu ul li p.slidemenu_txt_on { color:#aa1520; }
+        #sub_slidemenu ul li p.slidemenu_txt { color:#797979; }
+    </style>
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/css_ie8.css" media="all" /><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {       
+            var currentPosition = parseInt($("#sub_slidemenu").css("top"));
+            $(window).scroll(function () {
+                var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
+                $("#sub_slidemenu").stop().animate({ "top": position + currentPosition + "px" }, 0);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <div class="global_menu_area">
+                <div class="content">
+                    <ul class="global_menu">
+                        <li><a href="#">Home</a></li>
+                        <li>|</li>
+                        <li><a href="#">ContactUS</a></li>
+                        <li>|</li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div style="clear:both;"></div>
+                <div class="top_logo">
+                    <a href="#"><img src="img/toplogo.png" alt="" /></a>
+                </div>
+                <ul class="top_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">솔루션 <i style="padding:0 0 0 10px;"><img src="img/arrow.png" /></i></a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li class="top_menu_btn_box"><div class="top_menu_btn"><a href="#"><img src="img/top_menu_icon.png" alt="MENU" /></a></div></li>
+                </ul>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <div id="mid">
+            <div class="sub_banner">
+                <div class="sub_banner_tit">
+                    <h3>회사소개</h3>
+                    <p>성공적인 사업을 위한 든든한 파트너. (주)솔비트가 함께 하겠습니다.</p>
+                </div>
+                <div class="sub_tab_menu">
+                    <div class="tab_btn_1">회사개요</div>
+                    <div class="tab_btn_2">인사말</div>
+                    <div class="tab_btn_3">비전</div>                    
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="content" style="min-height:500px;">
+            </div>
+        </div>
+        <div id="foot">
+            <div class="content">
+                <div class="foot_box">
+                    <div class="foot_logo">
+                        <img src="img/foot_logo.png" />
+                    </div>
+                    <div class="foot_txt">
+                        <p>사업자등록번호: 000-000-00000<span class="foot_txt_bar">|</span>개인정보 관리책임자: 이용현 대리 yhlee@solbit.kr<span class="foot_txt_bar">|</span>(주) 솔비트 대표이사 홍호진</p>
+                        <p>(주) 솔비트 06632 서울시 서초구 서초중앙로22길 83(서초동, 주현빌등) 4층<span class="foot_txt_bar">|</span>T +82 2 2345 5678<span class="foot_txt_bar">|</span>M +82 10 2345 5678</p>
+                        <p>ⓒ Copyright 2017 SOLBIT All right reserved. Contact Webmaster for more Information.</p>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sub_slidemenu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/quickmenu_icon1.png" />
+                        <p class="slidemenu_txt_on">회사개요</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/quickmenu_icon2.png" />
+                        <p class="slidemenu_txt">인사말</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/quickmenu_icon3.png" />
+                        <p class="slidemenu_txt">비전</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -65,6 +65,15 @@ table.main_list_tb td div.main_list_box dl.main_list_txt_box { width:85%; margin
 table.main_list_tb td div.main_list_box dl.main_list_txt_box dt { font-size:1.4em; font-weight:bold; color:#444444; padding-bottom:14px; }
 table.main_list_tb td div.main_list_box dl.main_list_txt_box dd { font-size:1.2em; text-align:left; color:#777777; }
 
+div.sub_banner { width:100%; height:269px; background:url(../img/sub_banner.png) no-repeat center center; background-size:cover; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-position:center; position:relative; }
+div.sub_banner div.sub_banner_tit { width:1024px; margin:0 auto; padding:77px 0 0 0; text-align:center; color:white; }
+div.sub_banner_tit h3 { margin:0; padding:0; font-size:4.3em; }
+div.sub_banner_tit p { margin:0; padding:10px 0 0 0; font-size:1.3em; }
+
+div.sub_banner div.sub_tab_menu { width:1024px; height:52px; margin:0 auto; margin-top:52px; font-size:1.4em; font-weight:bold; }
+div.sub_tab_menu div.tab_btn_1 { float:left; width:338px; height:36px; background-color:white; text-align:center; color:black; padding:17px 0 0 0; vertical-align:middle; cursor:pointer; }
+div.sub_tab_menu div.tab_btn_2 { float:left; width:338px; height:36px; background-color:#4e4a89; text-align:center; color:white; padding:17px 0 0 0; vertical-align:middle; cursor:pointer; }
+div.sub_tab_menu div.tab_btn_3 { float:left; width:338px; height:36px; background-color:#262262; text-align:center; color:white; padding:17px 0 0 0; vertical-align:middle; cursor:pointer; }
 
 div#foot_banner { width:100%; position:relative; margin:0 auto; margin-top:90px; text-align:center; }
 div#foot_banner div#foot_banner_area { width:100%; height:428px; margin:0 auto; text-align:center; }
