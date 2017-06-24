@@ -38,9 +38,12 @@ ul.top_menu li { float:left; font-size:1.5em; padding:0 45px 15px 25px; font-wei
 ul.top_menu li.top_menu_btn_box { position:relative; }
 ul.top_menu li.top_menu_btn_box div.top_menu_btn { position:absolute; top:-2px; right:0; }
 
-div.main_banner1_area { width:1500px; margin:0 auto; background:url(../img/main_1.png) no-repeat; background-size:cover; }
-div.main_banner2_area { width:1500px; margin:0 auto; }
-div.main_banner3_area { width:1500px; min-height:731px; margin:0 auto; background:url(../img/main_3.png) no-repeat; background-size:cover; }
+div.main_banner1_area { width:100%; min-height:730px; height:730px; margin:0 auto; background:url(../img/main_1.png) no-repeat center center; background-size:cover; background-size:cover; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-position:center; }
+div.main_banner2_area { width:100%; margin:0 auto; }
+div.bg1 { width:100%; min-height:730px; height:730px; background:url(../img/main_2.png) no-repeat center center; background-size:cover; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-position:center; }
+div.bg2 { width:100%; min-height:730px; height:730px; background:url(../img/main_1.png) no-repeat center center; background-size:cover; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-position:center; }
+
+div.main_banner3_area { width:100%; min-height:731px; height:731px; margin:0 auto; background:url(../img/main_3.png) no-repeat center center; background-size:cover; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-position:center; }
 div.main1_tit { width:1024px; margin:0 auto; position:relative; }
 div.main1_tit dl.main1_txt { position:absolute; top:100px; left:0; color:#0d093f; line-height:54px; }
 div.main1_tit dl.main1_txt dt { font-size:3.6em; }
@@ -61,25 +64,6 @@ div.main_list_img div.list_img_layer div.list_img_layer_btn { position:absolute;
 table.main_list_tb td div.main_list_box dl.main_list_txt_box { width:85%; margin:0 auto; margin-top:24px; line-height:22px; }
 table.main_list_tb td div.main_list_box dl.main_list_txt_box dt { font-size:1.4em; font-weight:bold; color:#444444; padding-bottom:14px; }
 table.main_list_tb td div.main_list_box dl.main_list_txt_box dd { font-size:1.2em; text-align:left; color:#777777; }
-
-
-div#main_banner { width:100%; position:relative; margin:0 auto; text-align:center;}
-div#main_banner div.main_banner_txt { width:100%; position:absolute; top:0; z-index:99999; text-align:center; }
-div#main_banner div.main_banner_txt h3 { font-size:5em; letter-spacing:-4px; line-height:70px; margin:85px 0 40px 0; padding:0; font-weight:lighter; }
-div#main_banner div.main_banner_txt h6 { font-size:1.2em; color:white; font-weight:lighter; line-height:20px; margin:0; padding:0; }
-div#main_banner div.main_banner_menu { width:100%; position:absolute; bottom:48px; z-index:99999; }
-div#main_banner div.main_banner_menu ul { width:550px; margin:0 auto; }
-div#main_banner div.main_banner_menu ul li { width:33%; text-align:center; float:left; }
-div#main_banner div#banner_area { width:100%; height:515px; margin:0 auto; text-align:center; }
-div#main_banner div#banner_area div#banner_box { width:100%; height:515px; margin:0 auto; position:relative; }
-div#main_banner div#banner_area div#banner_box img { width:100%; max-width:1020px; height:515px; max-height:515px; text-align:center; } 
-div#main_banner div#banner_area div#banner_box .bg1 { width:100%; background:url(../img/main_banner_bg.png) no-repeat top center; } 
-div#main_banner div#banner_area div#banner_box .bg2 { width:100%; background:url(../img/main_banner_bg.png) no-repeat top center; } 
-div#main_banner div#banner_area div#banner_box .bg3 { width:100%; background:url(../img/main_banner_bg.png) no-repeat top center; } 
-div#main_banner div#banner_area div#banner_box .bg4 { width:100%; background:url(../img/main_banner_bg.png) no-repeat top center; } 
-div#main_banner div#banner_area div#banner_box .bg5 { width:100%; background:url(../img/main_banner_bg.png) no-repeat top center; } 
-div#main_banner div#banner_arrow_l { position:absolute; top:230px; left:195px; z-index:9999; }
-div#main_banner div#banner_arrow_r { position:absolute; top:230px; right:195px; z-index:9999; }
 
 
 div#foot_banner { width:100%; position:relative; margin:0 auto; margin-top:90px; text-align:center; }
