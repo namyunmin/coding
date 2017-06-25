@@ -10,14 +10,28 @@
     <meta property="og:description" content="SOLBIT">
     <meta property="og:image" content="">
     <meta property="og:url" content="">
-    <link rel="canonical" href="" />    
+    <link rel="canonical" href="" />
     <link href="css/Swiper.css?ver=1" rel="stylesheet" />
     <link href="css/css.css?ver=1" rel="stylesheet" type="text/css" />
     <style type="text/css">
-        #slidemenu { position:absolute; width:100px; top:50%; right:20px; z-index:9999; text-align:right; }
-        #slidemenu ul li a { color:black; } #slidemenu ul li { color:black; }
+        #slidemenu {
+            position: absolute;
+            width: 100px;
+            top: 50%;
+            right: 20px;
+            z-index: 9999;
+            text-align: right;
+        }
+
+            #slidemenu ul li a {
+                color: black;
+            }
+
+            #slidemenu ul li {
+                color: black;
+            }
     </style>
-    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/css_ie8.css" media="all" /><![endif]-->    
+    <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/css_ie8.css" media="all" /><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/Swiper.js"></script>
     <script type="text/javascript">
@@ -41,28 +55,38 @@
 
             var currentPosition = parseInt($("#slidemenu").css("top"));
             $(window).scroll(function() {
-                var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
+                var position = $(window).scrollTop();
                 $("#slidemenu").stop().animate({"top":position + currentPosition + "px"}, 0);
-            });            
+            });
         });
 
         function fnMove(num) {
             var ele = "";
             if (num == "1") {
-                ele = "top";
+                ele = "wrap";
+
+                $(".top_fixed").stop().animate({ "top": 0 }, 0);
+                $("#top").removeClass("top_fixed");
             }
             else if (num == "2" || num == "3") {
                 ele = "main" + num;
+
+                $("#top").addClass("top_fixed");
+                var currentPosition = parseInt($(".top_fixed").css("top"));
+                $(window).scroll(function () {
+                    var position = $(window).scrollTop(); 
+                    $(".top_fixed").stop().animate({ "top": position + "px" }, 0);
+                });
             }
 
             var offset = $("#" + ele).offset();
-            $('html, body').animate({scrollTop : offset.top}, 400);            
+            $('html, body').animate({scrollTop : offset.top}, 400);
         }
     </script>
 </head>
 <body>
     <div id="wrap">
-        <div id="top">
+        <div id="top" class="top_fixed">
             <div class="global_menu_area">
                 <div class="content">
                     <ul class="global_menu">
@@ -83,11 +107,11 @@
                     <li><a href="#">회사소개</a></li>
                     <li><a href="#">솔루션 <i style="padding:0 0 0 10px;"><img src="img/arrow.png" /></i></a></li>
                     <li><a href="#">서비스</a></li>
-                    <li><a href="#">CONTACT US</a></li>                    
+                    <li><a href="#">CONTACT US</a></li>
                     <li class="top_menu_btn_box"><div class="top_menu_btn"><a href="#"><img src="img/top_menu_icon.png" alt="MENU" /></a></div></li>
                 </ul>
                 <div style="clear:both;"></div>
-            </div>            
+            </div>
         </div>
         <div id="mid">
             <div class="main_banner1_area">
@@ -96,7 +120,7 @@
                         <dt><strong>건강하고, 안전한 세상</strong>을 만드는 기업<br /><strong>솔비트</strong>가 함께 하겠습니다.</dt>
                         <dd>Business Innovation</dd>
                     </dl>
-                </div>                
+                </div>
             </div>
             <div class="main_banner2_area">
                 <div id="main2" class="swiper-container">
@@ -105,7 +129,7 @@
                         <div class="swiper-slide bg2"></div>
                     </div>
                     <div id="banner_roll" class="swiper-pagination"></div>
-                </div>                
+                </div>
             </div>
             <div class="main_banner3_area">
                 <div id="main3" class="main3_tit">
@@ -150,7 +174,7 @@
                                             <dd style="clear:both;"></dd>
                                             <dd class="pos_l" style="width:145px;">- 연구지원</dd>
                                             <dd class="pos_l">- e-CRF</dd>
-                                            <dd style="clear:both;"></dd>                                            
+                                            <dd style="clear:both;"></dd>
                                             <dd class="pos_l">- CDM&통계</dd>
                                         </dl>
                                     </div>
@@ -173,7 +197,7 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table>                  
+                    </table>
                 </div>
             </div>
         </div>
@@ -197,9 +221,9 @@
             <ul>
                 <li><a href="#" onclick="fnMove('1'); return false;">●</a></li>
                 <li><a href="#" onclick="fnMove('2'); return false;">●</a></li>
-                <li><a href="#" onclick="fnMove('3'); return false;">●</a></li>                
+                <li><a href="#" onclick="fnMove('3'); return false;">●</a></li>
             </ul>
-        </div>        
+        </div>
     </div>
 </body>
 </html>
