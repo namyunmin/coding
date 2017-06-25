@@ -49,10 +49,20 @@
         function fnMove(num) {
             var ele = "";
             if (num == "1") {
-                ele = "top";
+                ele = "wrap";
+
+                $(".top_fixed").stop().animate({ "top": 0 }, 0);
+                $("#top").removeClass("top_fixed");
             }
             else if (num == "2" || num == "3") {
                 ele = "main" + num;
+
+                $("#top").addClass("top_fixed");
+                var currentPosition = parseInt($(".top_fixed").css("top"));
+                $(window).scroll(function () {
+                    var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.                    
+                    $(".top_fixed").stop().animate({ "top": position + "px" }, 0);
+                });
             }
 
             var offset = $("#" + ele).offset();
@@ -62,7 +72,7 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="top">
+        <div id="top" class="top_fixed">
             <div class="global_menu_area">
                 <div class="content">
                     <ul class="global_menu">
