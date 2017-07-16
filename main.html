@@ -12,25 +12,7 @@
     <meta property="og:url" content="">
     <link rel="canonical" href="" />
     <link href="css/Swiper.css?ver=1" rel="stylesheet" />
-    <link href="css/css.css?ver=1" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        #slidemenu {
-            position: absolute;
-            width: 100px;
-            top: 50%;
-            right: 20px;
-            z-index: 9999;
-            text-align: right;
-        }
-
-            #slidemenu ul li a {
-                color: black;
-            }
-
-            #slidemenu ul li {
-                color: black;
-            }
-    </style>
+    <link href="css/css.css?ver=1" rel="stylesheet" type="text/css" />   
     <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/css_ie8.css" media="all" /><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/Swiper.js"></script>
@@ -51,42 +33,45 @@
                 function () {
                     $("div.list_img_layer").hide();
                 }
-            );
-
-            var currentPosition = parseInt($("#slidemenu").css("top"));
-            $(window).scroll(function() {
-                var position = $(window).scrollTop();
-                $("#slidemenu").stop().animate({"top":position + currentPosition + "px"}, 0);
-            });
+            );       
         });
 
+        var flag = "N";
         function fnMove(num) {
             var ele = "";
             if (num == "1") {
                 ele = "wrap";
 
-                $(".top_fixed").stop().animate({ "top": 0 }, 0);
                 $("#top").removeClass("top_fixed");
+                $(window).scroll(function () {
+                    $("#top").removeClass("top_fixed");
+                });
             }
             else if (num == "2" || num == "3") {
                 ele = "main" + num;
-
-                $("#top").addClass("top_fixed");
-                var currentPosition = parseInt($(".top_fixed").css("top"));
+                flag = "N";
+        
+                $("#top").addClass("top_fixed");                
+                
                 $(window).scroll(function () {
-                    var position = $(window).scrollTop(); 
-                    $(".top_fixed").stop().animate({ "top": position + "px" }, 0);
+                    if (flag == "N") {
+                        $("#top").addClass("top_fixed");
+                    }
+                    if ($(window).scrollTop() == 0) {
+                        $("#top").removeClass("top_fixed");
+                        flag = "Y";
+                    }
                 });
             }
 
             var offset = $("#" + ele).offset();
-            $('html, body').animate({scrollTop : offset.top}, 400);
+            $('html, body').animate({scrollTop : offset.top - 116}, 400);
         }
     </script>
 </head>
 <body>
     <div id="wrap">
-        <div id="top" class="top_fixed">
+        <div id="top">
             <div class="global_menu_area">
                 <div class="content">
                     <ul class="global_menu">
@@ -217,7 +202,7 @@
             </div>
         </div>
 
-        <div id="slidemenu">
+        <div id="slidemenu" style="position:fixed;">
             <ul>
                 <li><a href="#" onclick="fnMove('1'); return false;">●</a></li>
                 <li><a href="#" onclick="fnMove('2'); return false;">●</a></li>
